@@ -1,0 +1,79 @@
+<templateSet group="PHP7 (tomasfejfar)">
+  <template name="test" value="public function test$NAME$(): void&#10;{&#10;    $END$&#10;}" description="PHPUnit test method" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="con" value="public function __construct(&#10;    $PARAMS$$END$&#10;) {&#10;    &#10;}" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="dataProvider" value="/**&#10;* @return $paramType$[][]&#10;*/&#10;public function $providerName$(): array&#10;{&#10;    return [&#10;        [&#10;            $END$,&#10;        ],&#10;    ];&#10;}" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="providerName" expression="clipboard()" defaultValue="" alwaysStopAt="false" />
+    <variable name="paramType" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="pubc" value="public const $NAME$ = $TEXT$;$END$" description="Public constant" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="pric" value="private const $NAME$ = $TEXT$;$END$" description="Private constant" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="proc" value="protected const $NAME$ = $TEXT$;$END$" description="Protected constant" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="tas" value="$this-&gt;assertSame($END$);" description="this assertSame" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="tae" value="$this-&gt;assertEquals($END$);" description="this assertEquals" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="tne" value="throw new \Exception($MESSAGE$);$END$" description="Throw new exception" toReformat="true" toShortenFQNames="true">
+    <variable name="MESSAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP Expression" value="true" />
+      <option name="PHP Statement" value="true" />
+    </context>
+  </template>
+  <template name="testdp" value="/**&#10; * @dataProvider $DATAPROVIDERNAME$&#10; */&#10;public function test$NAME$($EXPECTED$, $PARAMINPUT$): void&#10;{&#10;    $END$&#10;}&#10;&#10;/**&#10; * @return $DATAPROVIDERTYPE$&#10; */&#10;public function $DATAPROVIDER$(): array&#10;{&#10;    return [&#10;    &#9;&#10;    ];&#10;}" description="PHPUnit test method with data provider" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="EXPECTED" expression="" defaultValue="&quot;$expected&quot;" alwaysStopAt="true" />
+    <variable name="PARAMINPUT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DATAPROVIDER" expression="" defaultValue="&quot;dataProvider&quot;" alwaysStopAt="true" />
+    <variable name="DATAPROVIDERTYPE" expression="" defaultValue="&quot;mixed[][]&quot;" alwaysStopAt="true" />
+    <variable name="DATAPROVIDERNAME" expression="" defaultValue="DATAPROVIDER" alwaysStopAt="false" />
+    <context>
+      <option name="PHP Class Member" value="true" />
+    </context>
+  </template>
+  <template name="attribute" value="$TYPEHINT$ $ATTRIBUTENAME$" description="attribute - mainly to be used in other templates" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPEHINT" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ATTRIBUTENAME" expression="" defaultValue="$value" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>
