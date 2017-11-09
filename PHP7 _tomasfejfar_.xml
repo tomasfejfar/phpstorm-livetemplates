@@ -5,13 +5,7 @@
       <option name="PHP Class Member" value="true" />
     </context>
   </template>
-  <template name="con" value="public function __construct(&#10;    $PARAMS$$END$&#10;) {&#10;    &#10;}" description="" toReformat="true" toShortenFQNames="true">
-    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="PHP Class Member" value="true" />
-    </context>
-  </template>
-  <template name="dataProvider" value="/**&#10;* @return $paramType$[][]&#10;*/&#10;public function $providerName$(): array&#10;{&#10;    return [&#10;        [&#10;            $END$,&#10;        ],&#10;    ];&#10;}" description="" toReformat="true" toShortenFQNames="true">
+  <template name="dataProvider" value="/**&#10;* @return $paramType$[][]&#10;*/&#10;public function $providerName$(): array&#10;{&#10;    return [&#10;        [&#10;            $END$,&#10;        ],&#10;    ];&#10;}" description="PHPUnit data provider (with automatic name from clipboard)" toReformat="true" toShortenFQNames="true">
     <variable name="providerName" expression="clipboard()" defaultValue="" alwaysStopAt="false" />
     <variable name="paramType" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -51,13 +45,6 @@
       <option name="PHP Statement" value="true" />
     </context>
   </template>
-  <template name="tne" value="throw new \Exception($MESSAGE$);$END$" description="Throw new exception" toReformat="true" toShortenFQNames="true">
-    <variable name="MESSAGE" expression="" defaultValue="" alwaysStopAt="true" />
-    <context>
-      <option name="PHP Expression" value="true" />
-      <option name="PHP Statement" value="true" />
-    </context>
-  </template>
   <template name="testdp" value="/**&#10; * @dataProvider $DATAPROVIDERNAME$&#10; */&#10;public function test$NAME$($EXPECTED$, $PARAMINPUT$): void&#10;{&#10;    $END$&#10;}&#10;&#10;/**&#10; * @return $DATAPROVIDERTYPE$&#10; */&#10;public function $DATAPROVIDER$(): array&#10;{&#10;    return [&#10;    &#9;&#10;    ];&#10;}" description="PHPUnit test method with data provider" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="EXPECTED" expression="" defaultValue="&quot;$expected&quot;" alwaysStopAt="true" />
@@ -69,11 +56,10 @@
       <option name="PHP Class Member" value="true" />
     </context>
   </template>
-  <template name="attribute" value="$TYPEHINT$ $ATTRIBUTENAME$" description="attribute - mainly to be used in other templates" toReformat="false" toShortenFQNames="true">
-    <variable name="TYPEHINT" expression="completeSmart()" defaultValue="" alwaysStopAt="true" />
-    <variable name="ATTRIBUTENAME" expression="" defaultValue="$value" alwaysStopAt="true" />
+  <template name="con" value="public function __construct(&#10;    $PARAMS$$END$&#10;) {&#10;    &#10;}" description="Multiline constructor for multiple dependencies" toReformat="true" toShortenFQNames="true">
+    <variable name="PARAMS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
-      <option name="PHP" value="true" />
+      <option name="PHP Class Member" value="true" />
     </context>
   </template>
 </templateSet>
